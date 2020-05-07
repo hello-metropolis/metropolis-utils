@@ -8,6 +8,6 @@ echo "> Untaring binary"
 tar -zxvf /metropolis-utils/helm.tgz -C /metropolis-utils
 
 echo "> Adding helm to metropolis-utils path"
-export PATH=$PATH:/metropolis-utils/bin/linux-amd64
+export PATH=$PATH:/metropolis-utils
 
 echo "> Complete"
