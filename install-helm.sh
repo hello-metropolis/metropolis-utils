@@ -14,4 +14,6 @@ export PATH=$PATH:/metropolis-utils
 
 echo $PATH
 
+helm version
+
 echo "> Complete"
