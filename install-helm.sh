@@ -1,5 +1,13 @@
-mkdir /tmp/metropolis-utils
-curl https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/helm.tgz -o /tmp/metropolis-utils/helm.tgz
+echo "Metropolis Utils - Adding Helm"
+mkdir /metropolis-utils
 
+echo "> Downloading binary"
+curl https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/helm.tgz -o /metropolis-utils/helm.tgz
 
-tar -zxvf /tmp/metropolis-utils/helm.tgz -C /tmp/metropolis-utils
+echo "> Untaring binary"
+tar -zxvf /tmp/metropolis-utils/helm.tgz -C /metropolis-utils
+
+echo "> Adding helm to metropolis-utils path"
+export PATH=$PATH:/metropolis-utils/bin/linux-amd64
+
+echo "> Complete"
