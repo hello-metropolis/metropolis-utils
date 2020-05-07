@@ -7,7 +7,11 @@ curl https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/helm.tgz -o
 echo "> Untaring binary"
 tar -zxvf /metropolis-utils/helm.tgz -C /metropolis-utils
 
+chmod a+x /metropolis-utils/helm
+
 echo "> Adding helm to metropolis-utils path"
 export PATH=$PATH:/metropolis-utils
+
+echo $PATH
 
 echo "> Complete"
