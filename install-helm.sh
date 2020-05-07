@@ -12,6 +12,7 @@ chmod a+x /metropolis-utils/helm
 echo "> Adding helm to metropolis-utils path"
 echo "export PATH=\$PATH:/metropolis-utils" >> /metropolis-utils/.metropolis-utils
 
+source  /metropolis-utils/.metropolis-utils
 echo $PATH
 
 helm version
