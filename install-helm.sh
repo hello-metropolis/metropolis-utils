@@ -10,7 +10,7 @@ tar -zxvf /metropolis-utils/helm.tgz -C /metropolis-utils
 chmod a+x /metropolis-utils/helm
 
 echo "> Adding helm to metropolis-utils path"
-export PATH=$PATH:/metropolis-utils
+echo "export PATH=\$PATH:/metropolis-utils" >> /metropolis-utils/.metropolis-utils
 
 echo $PATH
 
