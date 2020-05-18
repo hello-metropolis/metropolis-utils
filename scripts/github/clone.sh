@@ -11,8 +11,8 @@ echo -n "$DEPLOY_KEY\n" > /root/.ssh/id_github
 cat /root/.ssh/id_github
 chmod 600 /root/.ssh/id_github
 #
-# eval `ssh-agent -s`
-# echo -e "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known_hosts
+eval `ssh-agent -s`
+echo -e "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known_hosts
 #
 # for domain in "github.com"; do
 #   sed -i "/$domain/d" /root/.ssh/known_hosts
