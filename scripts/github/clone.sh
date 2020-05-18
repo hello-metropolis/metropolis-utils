@@ -1,4 +1,10 @@
 mkdir /root/.ssh
+echo "DEPLOY_KEY"
+echo $DEPLOY_KEY
+
+echo "GITHUB URL"
+echo $GITHUB_URL
+
 
 echo -n $DEPLOY_KEY > /root/.ssh/id_github
 chmod 600 /root/.ssh/id_github
