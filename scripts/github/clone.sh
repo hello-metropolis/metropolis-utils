@@ -13,7 +13,6 @@ cat /root/.ssh/id_github
 chmod 600 /root/.ssh/id_github
 
 eval `ssh-agent -s`
-ssh-add -K /root/.ssh/id_github
 # echo "-k"
 # echo -e "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known_hosts
 #
