@@ -1,12 +1,12 @@
 mkdir /root/.ssh
 echo "DEPLOY_KEY"
-echo $DEPLOY_KEY
+echo "$DEPLOY_KEY"
 
 echo "GITHUB URL"
 echo $GITHUB_URL
 
 
-echo -n $DEPLOY_KEY > /root/.ssh/id_github
+echo -n "$DEPLOY_KEY" > /root/.ssh/id_github
 
 cat /root/.ssh/id_github
 
