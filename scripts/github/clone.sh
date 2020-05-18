@@ -17,7 +17,7 @@ for domain in "github.com"; do
   echo $line >> /root/.ssh/known_hosts
 done
 
-echo "KH - SKIP THE KH add"
+echo "known_hosts pop"
 cat /root/.ssh/known_hosts
 
 # Setup the .clone file with the commands to run to clone.
