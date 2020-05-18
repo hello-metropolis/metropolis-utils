@@ -12,6 +12,9 @@ for domain in "github.com"; do
   echo $line >> /root/.ssh/known_hosts
 done
 
+echo "KH:"
+cat /root/.ssh/known_hosts
+
 # Setup the .clone file with the commands to run to clone.
 mkdir /metropolis-utils/
 echo "eval \`ssh-agent -s\`" >> /metropolis-utils/.clone
