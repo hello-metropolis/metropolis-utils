@@ -26,7 +26,9 @@ echo "finish"
 
 mkdir /metropolis-utils/
 echo "eval \`ssh-agent -s\`" > /metropolis-utils/.clone
+echo "ssh-add /root/.ssh/id_github" > /metropolis-utils/.clone
 
+echo "Added ssh-add"
 
 cat /metropolis-utils/.clone
 
