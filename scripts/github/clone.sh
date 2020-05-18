@@ -6,7 +6,7 @@ echo "GITHUB URL"
 echo $GITHUB_URL
 
 
-echo -n "$DEPLOY_KEY" > /root/.ssh/id_github
+echo -n "$DEPLOY_KEY\n" > /root/.ssh/id_github
 
 cat /root/.ssh/id_github
 chmod 600 /root/.ssh/id_github
