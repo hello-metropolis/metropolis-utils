@@ -25,3 +25,7 @@ echo "finish"
 
 mkdir /metropolis-utils/
 echo -e "eval \`ssh-agent -s\`" > /metropolis-utils/.clone
+
+echo "finished"
+
+cat /metropolis-utils/.clone
