@@ -24,7 +24,7 @@ echo -e "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/kn
 echo "finish"
 
 mkdir /metropolis-utils/
-echo -e "eval \`ssh-agent -s\`" > /metropolis-utils/.clone
+echo "eval \`ssh-agent -s\`" > /metropolis-utils/.clone
 
 echo "finished"
 
