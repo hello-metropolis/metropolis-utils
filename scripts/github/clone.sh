@@ -13,6 +13,9 @@ chmod 600 /root/.ssh/id_github
 #
 
 echo -e "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known_hosts
+
+echo "known hosts"
+cat /root/.ssh/known_hosts
 #
 # for domain in "github.com"; do
 #   sed -i "/$domain/d" /root/.ssh/known_hosts
