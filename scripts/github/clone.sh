@@ -6,11 +6,16 @@ chmod 600 /root/.ssh/id_github
 
 # Add to known_hosts
 echo "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known_hosts
-# for domain in "github.com"; do
-#   sed -i "/$domain/d" /root/.ssh/known_hosts
-#   line=$(ssh-keyscan $domain,`nslookup $domain | awk '/^Address: / { print $2 ; exit }'`)
-#   echo $line >> /root/.ssh/known_hosts
-# done
+for domain in "github.com"; do
+  sed -i "/$domain/d" /root/.ssh/known_hosts
+  line=$(ssh-keyscan $domain)
+  # gcloud doesn't support nslookup without the package,
+  # but will allow clones without ip
+
+  # line=$(ssh-keyscan $domain,`nslookup $domain | awk '/^Address: / { print $2 ; exit }'`)
+
+  echo $line >> /root/.ssh/known_hosts
+done
 
 echo "KH - SKIP THE KH add"
 cat /root/.ssh/known_hosts
