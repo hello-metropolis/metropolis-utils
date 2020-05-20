@@ -24,6 +24,16 @@ cat /root/.ssh/known_hosts
 mkdir /metropolis-utils/
 echo "eval \`ssh-agent -s\`" >> /metropolis-utils/.clone
 echo "ssh-add /root/.ssh/id_github" >> /metropolis-utils/.clone
-echo "git clone $GITHUB_URL . -b $BRANCH --depth=1" >> /metropolis-utils/.clone
+
+# This strategy works for a depth=1 clone for a specific
+# commit _OR_ a branch.
+echo "git init" >> /metropolis-utils/.clone
+echo "git remote add origin $GITHUB_URL" >> /metropolis-utils/.clone
+echo "git fetch origin $REF --depth=1" >> /metropolis-utils/.clone
+echo "git checkout $REF" >> /metropolis-utils/.clone
+
+# Only works for branches
+# echo "git clone $GITHUB_URL . -b $BRANCH --depth=1" >> /metropolis-utils/.clone
+
 
 cat /metropolis-utils/.clone
