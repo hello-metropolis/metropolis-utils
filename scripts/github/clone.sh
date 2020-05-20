@@ -24,6 +24,6 @@ cat /root/.ssh/known_hosts
 mkdir /metropolis-utils/
 echo "eval \`ssh-agent -s\`" >> /metropolis-utils/.clone
 echo "ssh-add /root/.ssh/id_github" >> /metropolis-utils/.clone
-echo "git clone $GITHUB_URL . --depth=1" >> /metropolis-utils/.clone
+echo "git clone $GITHUB_URL . -b $BRANCH --depth=1" >> /metropolis-utils/.clone
 
 cat /metropolis-utils/.clone
