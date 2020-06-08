@@ -2,10 +2,10 @@ echo "metropolis-utils - installing cloud_sql_proxy"
 mkdir /metropolis-utils
 
 echo "> Downloading binary"
-curl https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/cloud_sql_proxy.tgz -o /metropolis-utils/cloud_sql_proxy.tgz
+curl -sS https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/cloud_sql_proxy.tgz -o /metropolis-utils/cloud_sql_proxy.tgz
 
 echo "> untaring binary"
-tar -zxvf /metropolis-utils/cloud_sql_proxy.tgz -C /metropolis-utils
+tar -zxf /metropolis-utils/cloud_sql_proxy.tgz -C /metropolis-utils
 
 chmod a+x /metropolis-utils/cloud_sql_proxy
 

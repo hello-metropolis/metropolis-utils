@@ -5,7 +5,7 @@ echo "> Downloading binary"
 curl -sS https://storage.googleapis.com/metropolis-utils/bin/linux-amd64/terraform.tgz -o /metropolis-utils/terraform.tgz
 
 echo "> Untaring binary"
-tar -zxvf /metropolis-utils/terraform.tgz -C /metropolis-utils
+tar -zxf /metropolis-utils/terraform.tgz -C /metropolis-utils
 
 chmod a+x /metropolis-utils/terraform
 
