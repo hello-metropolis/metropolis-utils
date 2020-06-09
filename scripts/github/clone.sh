@@ -9,16 +9,8 @@ echo "Hostname github.com\nIdentityFile /root/.ssh/id_github" > /root/.ssh/known
 for domain in "github.com"; do
   sed -i "/$domain/d" /root/.ssh/known_hosts
   line=$(ssh-keyscan $domain)
-  # gcloud doesn't support nslookup without the package,
-  # but will allow clones without ip
-
-  # line=$(ssh-keyscan $domain,`nslookup $domain | awk '/^Address: / { print $2 ; exit }'`)
-
   echo $line >> /root/.ssh/known_hosts
 done
-
-echo "known_hosts pop"
-cat /root/.ssh/known_hosts
 
 # Setup the .clone file with the commands to run to clone.
 mkdir /metropolis-utils/
@@ -32,8 +24,9 @@ echo "git remote add origin $GITHUB_URL" >> /metropolis-utils/.clone
 echo "git fetch origin $REF --depth=1" >> /metropolis-utils/.clone
 echo "git checkout $REF" >> /metropolis-utils/.clone
 
-# Only works for branches
+# This strategy clones a github url with a depth of 1
+# but unfortunately, it doesn't work for SHA tags commits.
 # echo "git clone $GITHUB_URL . -b $BRANCH --depth=1" >> /metropolis-utils/.clone
 
-
-cat /metropolis-utils/.clone
+# For debugging
+# cat /metropolis-utils/.clone
