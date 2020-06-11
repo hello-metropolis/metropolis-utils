@@ -1,4 +1,4 @@
-echo "Metropolis Utils - Adding Helm"
+echo "Metropolis Utils - Adding Terraform"
 mkdir /metropolis-utils
 
 echo "> Downloading binary"
@@ -9,7 +9,7 @@ tar -zxf /metropolis-utils/terraform.tgz -C /metropolis-utils
 
 chmod a+x /metropolis-utils/terraform
 
-echo "> Adding helm to metropolis-utils path"
+echo "> Adding terraform to metropolis-utils path"
 echo "export PATH=\$PATH:/metropolis-utils" >> /metropolis-utils/.metropolis-utils
 
 .  /metropolis-utils/.metropolis-utils
